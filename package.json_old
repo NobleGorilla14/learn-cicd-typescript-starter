@@ -1,24 +1,16 @@
 {
   "name": "learn-cicd-typescript-starter",
   "version": "1.0.0",
-  "type": "module",
   "main": "dist/main.js",
+  "type": "module",
   "scripts": {
+    "test": "vitest --run"
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "build": "npx tsc",
     "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js",
-    "test": "vitest --run"
-  },
-  "dependencies": {
-    "@libsql/client": "^0.14.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "drizzle-orm": "^0.36.2",
-    "express": "^4.21.1",
-    "uuid": "^11.0.3"
+    "dev": "npx tsc && node dist/main.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -28,14 +20,21 @@
     "globals": "^15.12.0",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
-    "vitest": "^4.0.18"
+    "vitest": "^5.0.1"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.2",
+    "express": "^4.21.1",
+    "uuid": "^11.0.3"
   },
   "prettier": {
     "printWidth": 80,
-    "semi": true,
-    "singleQuote": false,
+    "useTabs": false,
     "tabWidth": 2,
-    "useTabs": false
+    "semi": true,
+    "singleQuote": false
   }
 }
-
