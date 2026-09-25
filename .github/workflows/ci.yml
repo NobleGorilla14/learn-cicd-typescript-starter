@@ -40,8 +40,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install prettier repo
-        run: npm install -D --save-exact prettier
- 
       - name: Format Check
         run: npm run format:check
